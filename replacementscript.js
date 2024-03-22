@@ -62,7 +62,7 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 
 	const updateActions = function () {
 		const actions = _nestedActions.length > 0 ? _nestedActions[_nestedActions.length - 1] : _actions;
-		
+		console.log(actions);
 		_center.classList.toggle("back", _nestedActions.length > 0);
 
 		clearHTML(_ul);
@@ -106,8 +106,6 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 				else {
 					li.onclick = () => {
 						if (_state == ACTION_HUB.State.Open) {
-							alert("I am an alert box!");
-							console.log(action);
 							li.classList.add("selected");
 							_actionHub.Close();
 							action.event ? action.event(action) : null;
