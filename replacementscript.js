@@ -70,7 +70,6 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 
 		for (const action of actions) {
 			const li = document.createElement("li");
-			unsafewindow.console.log(action);
 			if (!action) {
 				li.className = "inactive";
 			}
@@ -107,6 +106,7 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 				else {
 					li.onclick = () => {
 						if (_state == ACTION_HUB.State.Open) {
+							console.log(action);
 							li.classList.add("selected");
 							_actionHub.Close();
 							action.event ? action.event(action) : null;
