@@ -62,7 +62,7 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 
 	const updateActions = function () {
 		const actions = _nestedActions.length > 0 ? _nestedActions[_nestedActions.length - 1] : _actions;
-		console.log(actions);
+		
 		_center.classList.toggle("back", _nestedActions.length > 0);
 
 		clearHTML(_ul);
@@ -70,7 +70,7 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 
 		for (const action of actions) {
 			const li = document.createElement("li");
-
+			console.log(action);
 			if (!action) {
 				li.className = "inactive";
 			}
