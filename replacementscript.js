@@ -70,7 +70,7 @@ ACTION_HUB.ActionHub = function (_x, _y, ...args) {
 
 		for (const action of actions) {
 			const li = document.createElement("li");
-			console.log(action);
+			GM_log(action);
 			if (!action) {
 				li.className = "inactive";
 			}
